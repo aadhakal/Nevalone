@@ -1,0 +1,27 @@
+ion-header {
+    --background: var(--ion-color-primary);
+    --color: #ffffff;  /* White text color */
+  }
+  
+  ion-item {
+    --background: #f0f0f0;  /* Light grey background */
+    --color: #000000;  /* Black text color */
+  }
+  
+  ion-toggle {
+    --background: #d9d9d9;  /* Light grey toggle background */
+    --handle-background: var(--ion-color-primary);  /* Green toggle handle */
+  }
+  
+  ion-header {
+    ion-toolbar {
+        --background: #872c58; 
+        color: #ffffff; 
+  
+        ion-title {
+            font-size: 1em;
+            font-weight: bold;
+        }
+    }
+  }
+  

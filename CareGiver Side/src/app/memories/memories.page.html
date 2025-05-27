@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Memories
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/defaultPathIfNoHistory" (click)="navigateBack()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Iterate over the contentList array to generate multiple cards -->
+  <ion-card *ngFor="let content of contentList">
+    <img alt="Content Image" [src]="content.imgSrc" />
+    <ion-card-header>
+      <ion-card-title>{{ content.title }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ content.description }}</p>
+      <!-- The buttons can remain static or be tied to dynamic actions -->
+      <ion-grid>
+        <ion-row justify-content-between align-items-center>
+          <ion-col size="auto">
+            <ion-button fill="clear">
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-button fill="clear">
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-button fill="clear">
+           </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

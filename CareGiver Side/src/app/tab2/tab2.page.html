@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Craft Your Letter</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>Write a heartfelt letter for your loved ones and schedule it for a future date. Relive memories and share wisdom.</p>
+
+  <ion-textarea [(ngModel)]="letterBody" placeholder="Write your letter here..." rows="10"></ion-textarea>
+
+  <ion-button class="date" (click)="openDatePicker()">Select Date and Time</ion-button>
+  <ion-datetime [(ngModel)]="selectedDate" (ionChange)="updateSelectedDate($event)"></ion-datetime>
+
+  <ion-item>
+    <ion-label>Recipient:</ion-label>
+    <ion-input [(ngModel)]="recipient" type="text" placeholder="Recipient's Name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contact Details:</ion-label>
+    <ion-input [(ngModel)]="contactDetails" type="text" placeholder="Recipient's Email/Phone"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="saveLetter()">Save Letter</ion-button>
+
+  <h2>Scheduled Letters</h2>
+  <ion-list>
+    <!-- Sample scheduled letter. In a real app, this will be dynamic -->
+    <ion-item>
+      <ion-label>To: John (Email: john@example.com)
+        <p>Date: December 25, 2025</p>
+      </ion-label>
+      <ion-button slot="end" fill="outline" size="small" (click)="editSend()">Edit</ion-button>
+      <ion-button slot="end" fill="outline" color="danger" size="small">Delete</ion-button>
+    </ion-item>
+    <!-- More items can be added similarly or dynamically with *ngFor -->
+  </ion-list>
+</ion-content>

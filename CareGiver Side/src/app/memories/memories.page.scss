@@ -1,0 +1,46 @@
+ion-header {
+  ion-toolbar {
+      --background: #872c58; 
+      color: #ffffff; 
+
+      ion-title {
+          font-size: 1em;
+          font-weight: bold;
+      }
+  }
+}
+
+ion-content {
+  ion-card {
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    img {
+      max-height: 500px; // Control the image height here
+      width: auto;       // Maintain the image aspect ratio
+      margin: auto;      // Center the image horizontally
+      display: block;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    ion-card-content {
+      p {
+        font-size: 0.9em;
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      ion-grid {
+        ion-button {
+          font-size: 0.9em;
+
+          ion-icon {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+
+}

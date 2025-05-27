@@ -1,0 +1,7 @@
+{
+  "name": "imAI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

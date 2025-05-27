@@ -1,0 +1,19 @@
+form {
+    margin-top: 50px;
+  
+    ion-button {
+      margin-top: 20px;
+    }
+  }
+  
+  ion-header {
+    ion-toolbar {
+        --background: #872c58; 
+        color: #ffffff; 
+  
+        ion-title {
+            font-size: 1em;
+            font-weight: bold;
+        }
+    }
+  }

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome to NavAlone</ion-title>
+        <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Where Memories Last Forever</h2>
+  <p>Preserve your memories, share your wisdom, and craft letters for the future, all in one place.</p>
+
+  <ion-button expand="block" routerLink="/letters">Start Your Journey</ion-button>
+
+  <ion-card class="testimonial-card">
+    <ion-card-header>
+      <ion-card-title>What Our Users Say</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      "Using ImmortalAI, I've captured precious moments with my grandchildren. It's easy to use and truly invaluable." - Jane D.
+    </ion-card-content>
+  </ion-card>
+
+  <h2>How It Works</h2>
+  <ion-list>
+  <ion-button class=" bt bt1"[routerLink]="'/memories'">Go to Memories</ion-button>
+  <ion-button class="bt bt2"[routerLink]="'/letters'">Go to Letters</ion-button>
+  <ion-button class="bt bt3"[routerLink]="'/wisdom'">Go to Wisdom</ion-button>
+
+  </ion-list>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button routerLink="/support">Support</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button routerLink="/faq">FAQs</ion-button>
+        <ion-button routerLink="/tos">Terms of Service</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

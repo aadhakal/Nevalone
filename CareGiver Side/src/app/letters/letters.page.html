@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Letters
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/defaultPathIfNoHistory" (click)="navigateBack()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item-group *ngFor="let letter of savedLetters; let i = index">
+      
+      <!-- The letter header (date) -->
+      <ion-item-divider color="light">
+        {{ letter.date | date: 'longDate' }}
+      </ion-item-divider>
+
+      <!-- Sender and Recipient -->
+      <ion-item *ngIf="letter.expanded">
+        <ion-label>
+          To: {{ letter.to }} <br>
+          From: {{ letter.from }}
+        </ion-label>
+      </ion-item>
+
+      <!-- The truncated content of the letter -->
+      <ion-item *ngIf="!letter.expanded" (click)="toggleExpand(i)">
+        <ion-label>
+          {{ letter.body.substring(0,100) }}... 
+          <ion-button fill="clear" (click)="toggleExpand(i)">Read More</ion-button>
+        </ion-label>
+      </ion-item>
+
+      <!-- The expanded content of the letter -->
+      <ion-item *ngIf="letter.expanded" (click)="letter.expanded = false">
+        <div class="letter-content">
+          {{ letter.body }}
+          <ion-button fill="clear">Read Less</ion-button>
+        </div>
+      </ion-item>

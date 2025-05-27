@@ -1,0 +1,109 @@
+ion-header {
+  ion-toolbar {
+      --background: #872c58; 
+      color: #ffffff; 
+
+      ion-title {
+          font-size: 1em;
+          font-weight: bold;
+      }
+  }
+}
+
+ion-item {
+  ion-label {
+    display: block; // Make sure the label behaves like a block
+    overflow: hidden; // This ensures the content doesn't overflow the container
+    text-overflow: ellipsis; // This will show the '...' when content is truncated
+  }
+
+  &.ion-activatable {
+    --ripple-color: transparent; // This disables the default Ionic ripple effect
+  }
+}
+
+.full-content {
+  white-space: normal; // This allows the content to wrap to the next line
+}
+
+/* Base Styles for the Page */
+ion-content {
+  background-color: #fcf5c7; // Pastel Yellow for the main background
+}
+
+ion-header {
+  ion-toolbar {
+    background-color: #a2d5f2; // Pastel Blue for the toolbar
+    color: #ffffff;
+  }
+}
+
+/* Styles for the Letters */
+ion-card {
+  background-color: #eaeaea; // Soft Gray for the card background
+  margin-bottom: 10px;
+
+  ion-card-header {
+    background-color: #fbb3b3; // Pastel Pink for the header
+    color: #ffffff;
+  }
+
+  ion-card-content {
+    background-color: #ffffff; // White for the content area for contrast
+    color: #000;
+  }
+}
+
+/* Other Components */
+ion-button {
+  --background: #a0d6b4; // Pastel Green for buttons
+  --color: #000; // Text color for buttons
+}
+
+.collapsed {
+  // Define the styles for a collapsed state
+  ion-item-divider {
+      display: none;  // Hide the date when collapsed
+  }
+
+  ion-item:not(:first-child) {  // Exclude the sender and recipient line from hiding
+      display: none;
+  }
+}
+
+ion-item {
+  ion-label {
+    display: block; 
+    overflow: visible; // Ensure the content isn't restricted
+    text-overflow: clip; // This clips the content instead of adding ellipsis
+  }
+}
+
+.collapsed {
+  ion-item-divider {
+    display: none;  
+  }
+
+  ion-item:not(:first-child) {
+    display: none;
+  }
+}
+
+.expanded {
+  ion-item {
+    max-height: none; // Ensure the item doesn't restrict content height
+  }
+}
+
+ion-item {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 500px;
+  opacity: 1;
+
+  &.collapsed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+

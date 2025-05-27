@@ -1,0 +1,36 @@
+ion-header {
+    ion-toolbar {
+        --background: #872c58; 
+        color: #ffffff; 
+  
+        ion-title {
+            font-size: 1em;
+            font-weight: bold;
+        }
+    }
+  }
+
+  .construction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjust based on your needs */
+    text-align: center;
+}
+
+.construction-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.construction-container p {
+    color: #777;
+}
+
+/* Optional: Add some space on top for better visual */
+ion-content {
+    padding-top: 4rem;
+}
+
